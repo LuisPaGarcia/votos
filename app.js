@@ -35,12 +35,16 @@ const app = angular.module('app', [  ]);
 
 /* Controlador Index */
 app.controller('indexCont', function( $scope , $http ){
-    
+
     $scope.email;
     $scope.contrasena;
     let path;
 
     $scope.login = ()=>{
+        if(!$scope.email){
+            swal('Oops...','Something went wrong!','error');
+            return;
+        }
         $scope.loginCon($scope.email, $scope.contrasena);
         console.log('Input Password: ', $scope.contrasena);
         console.log('Encrypt Password: ', encriptar($scope.contrasena));
@@ -83,3 +87,4 @@ app.controller('recuperarCont', ( $scope )=>{
         }
     }
 });
+
