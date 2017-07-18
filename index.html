@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Votos Feria de Ciencias</title>
+</head>
+
+<body ng-app="app" ng-controller="indexCont">
+
+<div id="log-in">
+  <form class="login-form">
+    <h1 class="login-heading">Login</h1>
+    <p class="login-copy">Acceso a sistema de votación</p>
+    <div class="field-container -username">
+      <label for="demo">E-mail</label>
+      <input  type="email" name="demo" autocomplete="off" required ng-model="email"/>
+    </div>
+    <div class="field-container -password">
+      <label for="demo">Contraseña</label>
+      <input  type="password" name="demo" autocomplete="off" required ng-model="contrasena"/>
+    </div>
+    <button class="log-in-button" ng-click="login()">Iniciar sesión</button>
+    <a class="create-account-link" href="crear.html">No tienes una cuenta? Crea una cuenta aquí.</a>
+    <p> </p>
+    <a class="create-account-link" href="recuperar.html">Olvidaste tu contraseña? Puedes recuperarla aquí.</a>
+  </form>
+</div>
+
+</body>
+<script type="text/javascript" src="aes.js"></script> 
+<script type="text/javascript" src="jquery-1.11.1.min.js"></script> 
+<script type="text/javascript" src="angular.min.js"></script> 
+<script type="text/javascript" src="app.js"></script> 
+<script type="text/javascript">
+   
+
+</script>
+</html>
