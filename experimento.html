@@ -6,35 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body ng-app="app" ng-controller="expCont">
+<body ng-app="app" ng-controller="expCont" >
 <div class="container center">
-    <p>Primer Aspecto</p>
-    <h1>{{  }}</h1>
-    <div class="row">
-        <p>
-        <input type="radio" name="voto1" id="voto1_1">
-        <label for="voto1_1">1</label>
-        <input type="radio" name="voto1" id="voto1_2">
-        <label for="voto1_2">2</label>
-        <input type="radio" name="voto1" id="voto1_3">
-        <label for="voto1_3">3</label>
-        <input type="radio" name="voto1" id="voto1_4">
-        <label for="voto1_4">4</label>
-        <input type="radio" name="voto1" id="voto1_5">
-        <label for="voto1_5">5</label>
-        </p><p>
-        <input type="radio" name="voto1" id="voto1_6">
-        <label for="voto1_6">6</label>
-        <input type="radio" name="voto1" id="voto1_7">
-        <label for="voto1_7">7</label>
-        <input type="radio" name="voto1" id="voto1_8">
-        <label for="voto1_8">8</label>
-        <input type="radio" name="voto1" id="voto1_9">
-        <label for="voto1_9">9</label>
-        <input type="radio" name="voto1" id="voto1_10">
-        <label for="voto1_10">10</label>
-        <p>
+
+    <div ng-repeat="experimento in experimentos">   
+        <p>{{ experimento.id }}. {{ experimento.titulo }}</p>
+        <h3>Puntos: {{ experimento.puntuacion }}</h3>
+        <div class="row">
+            <p>
+            <input type="radio" name="{{'voto'+experimento.id}}" id="{{ 'object-' + experimento.id + 1 }}" value="1" ng-model="experimento.puntuacion">
+            <label for="{{ 'object-' + experimento.id + 1 }}">1</label>
+            <input type="radio" name="{{'voto'+experimento.id}}" id="{{ 'object-' + experimento.id + 2  }}" value="2" ng-model="experimento.puntuacion">
+            <label for="{{ 'object-' + experimento.id + 2 }}">2</label>
+            <input type="radio" name="{{'voto'+experimento.id}}" id="{{ 'object-' + experimento.id + 3  }}" value="3" ng-model="experimento.puntuacion">
+            <label for="{{ 'object-' + experimento.id + 3 }}">3</label>
+            <input type="radio" name="{{'voto'+experimento.id}}" id="{{ 'object-' + experimento.id + 4  }}" value="4" ng-model="experimento.puntuacion">
+            <label for="{{ 'object-' + experimento.id + 4 }}">4</label>
+            <input type="radio" name="{{'voto'+experimento.id}}" id="{{ 'object-' + experimento.id + 5  }}" value="5" ng-model="experimento.puntuacion">
+            <label for="{{ 'object-' + experimento.id + 5 }}">5</label>
+            </p><p>
+            <input type="radio" name="{{'voto'+experimento.id}}" id="{{ 'object-' + experimento.id + 6  }}" value="6" ng-model="experimento.puntuacion">
+            <label for="{{ 'object-' + experimento.id + 6 }}">6</label>
+            <input type="radio" name="{{'voto'+experimento.id}}" id="{{ 'object-' + experimento.id + 7  }}" value="7" ng-model="experimento.puntuacion">
+            <label for="{{ 'object-' + experimento.id + 7 }}">7</label>
+            <input type="radio" name="{{'voto'+experimento.id}}" id="{{ 'object-' + experimento.id + 8  }}" value="8" ng-model="experimento.puntuacion">
+            <label for="{{ 'object-' + experimento.id + 8 }}">8</label>
+            <input type="radio" name="{{'voto'+experimento.id}}" id="{{ 'object-' + experimento.id + 9  }}" value="9" ng-model="experimento.puntuacion">
+            <label for="{{ 'object-' + experimento.id + 9 }}">9</label>
+            <input type="radio" name="{{'voto'+experimento.id}}" id="{{ 'object-' + experimento.id + 10  }}" value="10" ng-model="experimento.puntuacion">
+            <label for="{{ 'object-' + experimento.id + 10 }}">10</label>
+            <p>
+        </div>
     </div>
+    <div ng-repeat="experimento in experimentos">
+        <p> {{ experimento.id }} : {{  experimento.puntuacion }}</p>
+    </div>
+    Average: {{calculateAverage(experimentos)}}
 </div>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="angular.min.js"></script> 
