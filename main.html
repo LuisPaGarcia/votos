@@ -1,1 +1,46 @@
-<h1>Main Page!</h1>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title> Feria de Ciencias</title>
+</head>
+<body ng-app="app" ng-controller="mainCont" style="background-color:">
+<h1 style="font-size: 3em; text-align:center">Experimentos</h1>
+<div class="container">
+    <div ng-repeat="exp in experimentos" >
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">{{ exp.titulo }}</span>
+                        <p>{{exp.descripcion}}.</p>
+                    </div>
+                        <div class="card-action">
+                            <a href="experimento.html" ng-hide="{{ exp.revisado }}">VOTAR</a>
+                            <a ng-hide="{{ !exp.revisado }}">Ya votaste por este experimento</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="jquery-1.11.1.min.js"></script> 
+<script type="text/javascript" src="angular.min.js"></script> 
+<script type="text/javascript" src="app.js"></script> 
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    
+<script type="text/javascript">
+   
+
+</script>
+</html>

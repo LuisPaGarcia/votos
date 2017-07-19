@@ -88,3 +88,82 @@ app.controller('recuperarCont', ( $scope )=>{
     }
 });
 
+/* Controlador crear usuario */
+app.controller('mainCont', ( $scope )=>{
+    $scope.experimentos = [
+        {
+            id: 1,
+            titulo: 'Titulo 1',
+            descripcion:'El primer experimento',
+            revisado: true
+        },
+        {
+            id: 2,
+            titulo: 'Titulo 2',
+            descripcion:'El segundo experimento',
+            revisado: false
+        },
+        {
+            id: 3,
+            titulo: 'Titulo 3',
+            descripcion:'El tercer experimento',
+            revisado: false
+        },
+        {
+            id: 4,
+            titulo: 'Titulo 4',
+            descripcion:'El cuarto experimento',
+            revisado: false
+        },
+        {
+            id: 5,
+            titulo: 'Titulo 5',
+            descripcion:'El quinto experimento',
+            revisado: false
+        },
+    ]
+
+
+});
+
+/* Controlador crear usuario */
+app.controller('expCont', ( $scope )=>{
+    $scope.aspectos = [
+        
+    ];
+
+    $scope.experimentos = [
+        {
+            id: 1,
+            titulo: 'Titulo 1',
+            descripcion:'El primer experimento',
+            revisado: true
+        },
+        {
+            id: 2,
+            titulo: 'Titulo 2',
+            descripcion:'El segundo experimento',
+            revisado: false
+        },
+        {
+            id: 3,
+            titulo: 'Titulo 3',
+            descripcion:'El tercer experimento',
+            revisado: false
+        },
+        {
+            id: 4,
+            titulo: 'Titulo 4',
+            descripcion:'El cuarto experimento',
+            revisado: false
+        },
+        {
+            id: 5,
+            titulo: 'Titulo 5',
+            descripcion:'El quinto experimento',
+            revisado: false
+        },
+    ]
+
+
+});
